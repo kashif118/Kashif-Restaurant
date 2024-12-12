@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bs5-lightbox/dist/index.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox/dist/index.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+    AOS.init();
+</script>
+
+    <style>
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .nav-link {
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #f0ad4e; /* Highlight color */
+        }
+
+        .navbar {
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar .nav-link {
+        position: relative;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+    }
+    .navbar .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #f0ad4e;
+        transition: width 0.3s ease-in-out;
+    }
+    .navbar .nav-link:hover {
+        color: #f0ad4e;
+    }
+    .navbar .nav-link:hover::after {
+        width: 100%;
+    }
+    .navbar .dropdown-menu {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+</head>
+<body>
+<!-- Header Section -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.php">
+      <img src="images/restaurant-logo.jpg" alt="Restaurant Logo" class="me-2">
+      <span class="fw-bold fs-1" style="font-family: 'Lobster', cursive; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); color: #e67e22;">Kashif</span>
+      <span class="fs-3" style="font-family: 'Roboto', sans-serif; font-weight: 700; letter-spacing: 2px; color: #2c3e50; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);">Restaurant</span>
+    </a>
+
+    <!-- Toggler for Mobile View -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-bold" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-bold" href="menu.php">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-bold" href="about.php">About</a>
+        </li>
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-dark fw-bold" href="services.php" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Services
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+        <li><a class="dropdown-item" href="reservation.php">Reservations</a></li>
+        <li><a class="dropdown-item" href="catering.php"><i class="bi bi-cup-straws"></i> Catering</a></li>
+        <li><a class="dropdown-item" href="events.php"><i class="bi bi-calendar-event"></i> Events</a></li>
+    </ul>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-bold" href="contact.php">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Social Media Icons -->
+      <ul class="navbar-nav ms-3 d-none d-lg-flex">
+        <li class="nav-item"><a href="#" class="nav-link text-dark"><i class="bi bi-facebook fs-5"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark"><i class="bi bi-instagram fs-5"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark"><i class="bi bi-twitter fs-5"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
